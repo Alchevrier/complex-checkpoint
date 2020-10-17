@@ -12,7 +12,7 @@ spec:
     - fibokubernetes.page
     - www.fibokubernetes.page
   acme:
-    solvers:
+    config:
       - http01:
           ingressClass: nginx
         domains:
