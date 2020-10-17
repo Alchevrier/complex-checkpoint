@@ -15,7 +15,7 @@ spec:
         - www.fibokubernetes.page
       secretName: fibokubernetes-page-tls
   rules:
-    - host: fibokubernetes-page-tls
+    - host: fibokubernetes.page
       http:
         paths:
           - path: /?(.*)
