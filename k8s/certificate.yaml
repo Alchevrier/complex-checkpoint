@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: fibokubernetes-page-tls
+spec:
+  secretName: fibokubernetes-page
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: fibokubernetes.page
+  dnsNames:
+    - fibokubernetes.page
+    - www.fibokubernetes.page
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - fibokubernetes.page
+          - www.fibokubernetes.page
