@@ -1,4 +1,4 @@
-docker build -t alchevrier/complex-client:latest -t alchevrier/complex-client=$SHA -f ./client/Dockerfile ./client
+docker build -t alchevrier/complex-client:latest -t alchevrier/complex-client:$SHA -f ./client/Dockerfile ./client
 docker build -t alchevrier/complex-server:latest -t alchevrier/complex-server:$SHA -f ./server/Dockerfile ./server
 docker build -t alchevrier/complex-worker:latest -t alchevrier/complex-worker:$SHA -f ./worker/Dockerfile ./worker
 
